@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import validator from "validator";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-// import { decrypt } from "dotenv/lib/main";
+
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -43,7 +43,7 @@ userSchema.pre("save",async function(next){
     if(!this.isModified("password")){
         next()
     }
-    this.password = await decrypt.hash(this.password,10)
+    this.password = await bcrypt.hash(this.password,10)
 })
 
 //COMPARING THE USER PASSWORD ENTERED BY USER WITH THE USER SAVED PASSWORD
