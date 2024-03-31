@@ -1,2 +1,9 @@
 config
 node_modules
+config/config.env
+config.env
+.env
+
+/config/config.env
+/config.env
+/.env
