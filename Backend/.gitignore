@@ -9,3 +9,4 @@ configdotenv
 /config.env
 /.env
  dotenvcd 
+env
