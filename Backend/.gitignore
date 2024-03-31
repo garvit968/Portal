@@ -2,8 +2,10 @@ config
 node_modules
 config/config.env
 config.env
+configdotenv
 .env
 
 /config/config.env
 /config.env
 /.env
+ dotenv
