@@ -36,7 +36,7 @@ const App = () => {
   
   return (
     <>
-      <BrowserRouter basename="https://jobbbify.netlify.app/">
+      <BrowserRouter >
         <Navbar />
         <Routes>
           <Route path="/login" element={<Login />} />
