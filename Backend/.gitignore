@@ -8,4 +8,4 @@ configdotenv
 /config/config.env
 /config.env
 /.env
- dotenv
+ dotenvcd 
