@@ -17,13 +17,13 @@ const MyApplications = () =>{
     const fetchData = async()=>{
     try {
       if (user&&user.role==='Employer') {
-        const response =await axios.get("http://localhost:4000/api/v1/application/employer/getall", {
+        const response =await axios.get("https://portal-44.onrender.com/api/v1/application/employer/getall", {
           withCredentials: true,
         })
         setApplications(response.data.applications)
       }
       else{
-        const response = await axios.get("http://localhost:4000/api/v1/application/jobseeker/getall", {
+        const response = await axios.get("https://portal-44.onrender.com/api/v1/application/jobseeker/getall", {
           withCredentials: true,
         })
         setApplications(response.data.applications)
@@ -41,7 +41,7 @@ const MyApplications = () =>{
   
   const deleteApplication = async (id) =>{
     try {
-      const response = await axios.delete(`http://localhost:4000/api/v1/application/delete/${id}`, {
+      const response = await axios.delete(`https://portal-44.onrender.com/api/v1/application/delete/${id}`, {
         withCredentials: true,
       })
       toast.success(response.data.message);

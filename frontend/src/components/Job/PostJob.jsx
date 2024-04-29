@@ -37,7 +37,7 @@ const PostJob = () =>{
         : { title, description, category, country, city, location, salaryFrom, salaryTo };
   
       const res = await axios.post(
-        "http://localhost:4000/api/v1/job/post",
+        "https://portal-44.onrender.com/api/v1/job/post",
         postData,
         {
           withCredentials: true,

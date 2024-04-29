@@ -17,7 +17,7 @@ const MyJobs = () =>{
   useEffect(() => {
     const fetchJobs = async() =>{
       try {
-        const {data} = await axios.get("http://localhost:4000/api/v1/job/getmyjobs", {withCredentials: true})
+        const {data} = await axios.get("https://portal-44.onrender.com/api/v1/job/getmyjobs", {withCredentials: true})
         setMyJobs(data.myJobs)
       } catch (error) {
         toast.error(error.response.data.message);
@@ -45,7 +45,7 @@ const MyJobs = () =>{
         const updatedJob = myJobs.find((job)=>{
         job._id===jobId
       })
-      const res = await axios.put(`http://localhost:4000/api/v1/job/update/${jobId}`, updatedJob, {withCredentials: true})
+      const res = await axios.put(`https://portal-44.onrender.com/api/v1/job/update/${jobId}`, updatedJob, {withCredentials: true})
       toast.success(res.data.message);
       setEditingMode(null);
       } catch (error) {
@@ -56,7 +56,7 @@ const MyJobs = () =>{
     //Function to delete job
     const handleDeleteJob = async(jobId) =>{
       try {
-        await axios.delete(`http://localhost:4000/api/v1/job/delete/${jobId}`, {
+        await axios.delete(`https://portal-44.onrender.com/api/v1/job/delete/${jobId}`, {
           withCredentials: true,
         })
         setMyJobs((prevJobs) => prevJobs.filter((job) => job._id !== jobId));

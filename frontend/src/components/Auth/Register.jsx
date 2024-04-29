@@ -21,7 +21,7 @@ const Register = () => {
   const handleRegister  = async(e) =>{
     e.preventDefault();
     try {
-      const {data} = await axios.post("http://localhost:4000/api/v1/user/register", {name, email,phone,password, role}, {headers:{
+      const {data} = await axios.post("https://portal-44.onrender.com/api/v1/user/register", {name, email,phone,password, role}, {headers:{
         "Content-Type": "application/json",
       },
     withCredentials: true})

@@ -12,7 +12,7 @@ const JobDetails = () => {
   useEffect(() => {
     const jobDetail = async() =>{
       try {
-        const res = await axios.get(`http://localhost:4000/api/v1/job/${id}`, {
+        const res = await axios.get(`https://portal-44.onrender.com/api/v1/job/${id}`, {
           withCredentials: true,
         })
         setJob(res.data.job)

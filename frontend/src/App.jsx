@@ -23,7 +23,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () =>{
       try {
-        const response = await axios.get("http://localhost:4000/api/v1/user/getuser", {withCredentials: true})
+        const response = await axios.get("https://portal-44.onrender.com/api/v1/user/getuser", {withCredentials: true})
         setUser(response.data.user)
         setIsAuthenticated(true)
       } catch (error) {
