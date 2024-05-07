@@ -24,7 +24,7 @@ const Jobs = () =>{
   }, []);
   
   if (!isAuthenticated) {
-    navigateTo("/");
+    navigateTo("/#");
   }
   
   return (

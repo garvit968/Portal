@@ -36,7 +36,7 @@ const MyApplications = () =>{
   }, [isAuthenticated])
 
   if (!isAuthenticated) {
-    navigateTo("/");
+    navigateTo("/#");
   }
   
   const deleteApplication = async (id) =>{

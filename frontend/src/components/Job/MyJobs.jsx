@@ -27,7 +27,7 @@ const MyJobs = () =>{
     fetchJobs()
     }, [])
     if (!isAuthenticated || (user && user.role !== "Employer")) {
-      navigateTo("/");
+      navigateTo("/#");
     }
     // Option to edit Job
     const handleEnableEdit = (jobId) =>{
